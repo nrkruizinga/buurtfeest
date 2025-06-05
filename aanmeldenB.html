@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aanmelding Buurtfeest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .horizontalForm>h3 {
+      width: 100%;
+      background: #bbb;
+      display: block;
+      margin: 0;
+      height: 58px;
+      padding-left: 30px;
+    }
+    form {
+        background-color: #f2f2f2;
+        border: 1px solid #bbb !important;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container my-5">
+    <form action="bedanktB.html" method="post" name="fs3_responder" class="horizontalForm">
+      <h3>Aanmelding Buurtfeest</h3>
+      <img src="buurtfeest.jpg" alt="Buurtfeest" class="img-fluid mb-4">
+      <a name="ancResp"></a>
+      <fieldset><label for="Tekst">Tekst</label>
+        <input type="text" name="Tekst" value="" size="40" maxlength="80" id="Tekst" placeholder="">
+        <label for="Email">E-mail</label>
+        <input name="Email" value="" size="40" maxlength="80" id="Email" placeholder="" type="email">
+        <label for="Telefoonnummer">Telefoonnummer</label>
+        <input type="tel" name="Telefoonnummer" value="" size="40" maxlength="80" id="Telefoonnummer" placeholder="">
+        <label for="Paswoord">Paswoord</label>
+        <input type="password" name="Paswoord" value="" size="40" maxlength="80" id="Paswoord" placeholder="">
+        <label for="Tekstgebied">Tekstgebied</label>
+        <textarea name="Tekstgebied" rows="5" cols="40" id="Tekstgebied" placeholder=""></textarea>
+        <label for="Nummer">Nummer (getal)</label>
+        <input type="number" name="Nummer" value="" size="10" maxlength="20" id="Nummer" placeholder="">
+        <fieldset class="vertical" style="min-height: 64px;">
+          <legend for="radio_vert">
+            Radioknop (radiobutton)
+
+
+          </legend>
+          <label for="Radioknop_ver_1">
+            <input type="radio" name="Radioknop" value="Optie 1" id="Radioknop_ver_1"> Optie 1
+          </label>
+          <br><label for="Radioknop_ver_2">
+            <input type="radio" name="Radioknop" value="Optie 2" id="Radioknop_ver_2"> Optie 2
+          </label>
+          <br><label for="Radioknop_ver_3">
+            <input type="radio" name="Radioknop" value="Optie 3" id="Radioknop_ver_3"> Optie 3
+          </label>
+          <br> <label for="Radioknop" generated="true" class="error"></label>
+        </fieldset>
+        <fieldset class="vertical" style="min-height: 37px;">
+          <legend>
+            Checkbox
+
+
+          </legend>
+
+          <label for="Checkbox_ver_1">
+            <input type="checkbox" name="Checkbox" value="Optie 1" id="Checkbox_ver_1">
+            Optie 1
+          </label>
+          <br>
+          <label for="Checkbox_ver_2">
+            <input type="checkbox" name="Checkbox" value="Optie 2" id="Checkbox_ver_2">
+            Optie 2
+          </label>
+          <br>
+          <label for="Checkbox_ver_3">
+            <input type="checkbox" name="Checkbox" value="Optie 3" id="Checkbox_ver_3">
+            Optie 3
+          </label>
+          <br>
+          <label for="Checkbox" generated="true" class="error"></label>
+        </fieldset>
+        <div class="dateField">
+          <label for="datepicker9">
+            Datum picker
+
+          </label>
+
+          <input type="text" name="Datumpicker" value="" size="" id="datepicker9" for="datepicker9" placeholder=""
+            class="hasDatepicker"><img class="ui-datepicker-trigger"
+            src="/site/CD60FA5882771B55C12579BF003B6F4A/$File/datepicker.png" alt="..." title="...">
+
+        </div>
+        <label for="Dropdownselectielijstenkel">
+          Dropdown selectielijst (enkel)
+
+        </label>
+        <select name="Dropdownselectielijstenkel" id="Dropdownselectielijstenkel">
+          <option value="-" id="Dropdownselectielijstenkel_1">-</option>
+          <option value="Keuze 1" id="Dropdownselectielijstenkel_2">Keuze 1</option>
+          <option value="Keuze 2" id="Dropdownselectielijstenkel_3">Keuze 2</option>
+          <option value="Keuze 3" id="Dropdownselectielijstenkel_4">Keuze 3</option>
+        </select>
+
+        <label for="Dropdownselectielijstmulti">
+          Dropdown selectielijst (multi)
+
+        </label>
+        <select multiple="" name="Dropdownselectielijstmulti" id="Dropdownselectielijstmulti">
+          <option value="-" id="Dropdownselectielijstmulti_1">-</option>
+          <option value="Keuze 1" id="Dropdownselectielijstmulti_2">Keuze 1</option>
+          <option value="Keuze 2" id="Dropdownselectielijstmulti_3">Keuze 2</option>
+          <option value="Keuze 3" id="Dropdownselectielijstmulti_4">Keuze 3</option>
+        </select>
+
+        <div class="uploadField">
+          <label for="Upload">
+            Upload
+
+          </label>
+          <input name="Upload" type="hidden" value="">
+          <iframe src="//www.rkruizinga.nl/che1-robbin/fs3_site.nsf/htmlUpload?openform&amp;attrequired=" width="40"
+            height="5" frameborder="0" scrolling="NO" allowtransparency="" name="attFrame" id="attFrame"></iframe>
+          <input name="attUNID" type="text" class="catcher">
+        </div>
+        <label for="Rangebalk">Range balk</label>
+        <input type="range" min="0" max="+5" step="1" name="Rangebalk" value="" size="" id="Rangebalk" placeholder="">
+        <label for="Colorpicker">Color picker</label>
+        <input type="color" name="Colorpicker" value="" size="" id="Colorpicker" placeholder="">
+        <label for="URL">URL</label>
+        <input type="url" name="URL" value="" size="40" maxlength="80" id="URL" placeholder="">
+        <p>RTF tekst</p>
+        <div class="clear"></div>
+        <input name="checker" value="" class="catcher" size="4">
+        <button type="button" id="verzenden" name="verzenden" class="" value="Verzenden"
+          onclick="if(validateResponseForm(this)){if(typeof switchLoadLayerTop == 'function'){switchLoadLayerTop('show')}; buildMruploader(document.forms['fs3_responder'], '1', window.frames['attFrame'], ''); ; if(typeof hideLoadlayeratfail == 'function'){hideLoadlayeratfail(document.fs3_responder)}}">Verzenden<svg>
+            <use href="/site/CD60FA5882771B55C12579BF003B6F4A/$File/entypo.svg#entypo-chevron-thin-right"></use>
+          </svg></button>
+      </fieldset>
+      <input name="inbox" type="hidden" value="none">
+      <input name="subject" type="hidden" value="">
+      <input name="formid" type="hidden" value="02632A377D9E47EEC1258C5800393774">
+      <input name="redirect" type="hidden"
+        value="/site/E6D193DC7B8912FDC1258C580039DB72?opendocument_and_fs3Form=posted#ancResp">
+      <input name="extrasendto" type="hidden" value="E6D193DC7B8912FDC1258C580039DB72">
+      <input name="mrid" type="hidden" value="">
+
+    </form>
+  </div>
+</body>
+
+</html>
