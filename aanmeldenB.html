@@ -71,16 +71,53 @@
     .horizontalForm input {
       margin-bottom: 20px;
     }
+
     button {
-      margin:0px !important;
+      margin: 0px !important;
       background-color: #0275FF !important;
       border-color: #0275FF !important;
       vertical-align: middle !important;
     }
+
     .horizontalForm button svg {
-        width: 45px;
-        height: 45px;
-        padding: 15px;
+      width: 45px;
+      height: 45px;
+      padding: 15px;
+    }
+
+    .verzend-knop {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      background-color: #0d6efd !important;
+      color: white !important;
+      border: none !important;
+      padding: 12px 20px !important;
+      border-radius: 4px !important;
+      font-size: 16px !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      transition: background-color 0.3s ease !important;
+      width: 100% !important;
+      max-width: 400px !important;
+    }
+
+    .verzend-tekst {
+      flex: 1 !important;
+      text-align: left !important;
+    }
+
+    .verzend-divider {
+      width: 1px !important;
+      height: 24px !important;
+      border-right: 2px dotted white !important;
+      margin: 0 12px !important;
+    }
+
+    .verzend-icon {
+      width: 16px !important;
+      height: 16px !important;
+      filter: brightness(0) invert(1) !important;
     }
   </style>
 </head>
@@ -173,11 +210,11 @@
         <label for="Telefoonnummer">Op welk telefoonnummer kunnen we je bereiken?</label>
         <input type="tel" name="Telefoonnummer" value="" size="40" maxlength="80" id="Telefoonnummer" placeholder="">
 
-
-        <button type="button" id="verzenden" name="verzenden" class="" value="Verzenden"
-          onclick="if(validateResponseForm(this)){if(typeof switchLoadLayerTop == 'function'){switchLoadLayerTop('show')}; buildMruploader(document.forms['fs3_responder'], '1', window.frames['attFrame'], ''); ; if(typeof hideLoadlayeratfail == 'function'){hideLoadlayeratfail(document.fs3_responder)}}">Verzenden<svg>
-            <use href="chevron-right.svg"></use>
-          </svg></button>
+        <button type="button" class="verzend-knop">
+          <span class="verzend-tekst">VERZENDEN</span>
+          <span class="verzend-divider"></span>
+          <img src="chevron-right.svg" alt=">" class="verzend-icon">
+        </button>
       </fieldset>
 
     </form>
