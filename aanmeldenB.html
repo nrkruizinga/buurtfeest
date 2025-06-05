@@ -120,12 +120,34 @@
       filter: brightness(0) invert(1) !important;
     }
   </style>
+   <script>
+    function updateBeschikbaarheidTekst(value) {
+      const opties = [
+        "Minder dan 1 dag",
+        "1 dag",
+        "2 dagen",
+        "3 dagen"
+      ];
+      document.getElementById("beschikbaarheid-tekst").textContent = opties[value];
+    }
+
+    // Initialiseer tekst als pagina geladen wordt
+    document.addEventListener("DOMContentLoaded", () => {
+      updateBeschikbaarheidTekst(document.getElementById("beschikbaarheid").value);
+    });
+
+
+    function handleSubmit(event) {
+      event.preventDefault(); // voorkomt echte verzending
+      window.location.href = "bedanktB.html"; // redirect
+    }
+  </script>
 </head>
 
 <body>
 
   <div class="container my-5">
-    <form action="bedanktB.html" method="post" name="fs3_responder" class="horizontalForm">
+    <form  onsubmit="handleSubmit(event)" class="horizontalForm">
       <h3>Aanmelding Buurtfeest</h3>
       <img src="buurtfeest.jpg" alt="Buurtfeest" class="img-fluid">
       <a name="ancResp"></a>
@@ -210,7 +232,7 @@
         <label for="Telefoonnummer">Op welk telefoonnummer kunnen we je bereiken?</label>
         <input type="tel" name="Telefoonnummer" value="" size="40" maxlength="80" id="Telefoonnummer" placeholder="">
 
-        <button type="button" class="verzend-knop">
+        <button type="submit" class="verzend-knop">
           <span class="verzend-tekst">VERZENDEN</span>
           <span class="verzend-divider"></span>
           <img src="chevron-right.svg" alt=">" class="verzend-icon">
