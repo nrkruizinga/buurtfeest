@@ -11,6 +11,13 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
+    textarea, select, input[type] {
+      border-color:#6C757D !important;
+    }
+    .form-range::-webkit-slider-runnable-track {
+      background-color: white;
+      border: 1px solid #6C757D !important;
+    }
   </style>
   <script>
     function updateBeschikbaarheidTekst(value) {
@@ -36,10 +43,10 @@
   </script>
 </head>
 
-<body class="bg-light">
+<body style="background-color: rgb(231, 248, 253);">
 
   <div class="container my-5">
-    <h3 class="mb-3">Aanmelding Buurtfeest</h3>
+    <h3 class="mb-3"><b>Aanmelding Buurtfeest</b></h3>
     <img src="buurtfeest.jpg" alt="Buurtfeest" class="img-fluid mb-4">
 
     <form onsubmit="handleSubmit(event)">

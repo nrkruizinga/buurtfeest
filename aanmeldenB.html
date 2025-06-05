@@ -16,137 +16,169 @@
       height: 58px;
       padding-left: 30px;
     }
+
     form {
-        background-color: #f2f2f2;
-        border: 1px solid #bbb !important;
+      background-color: #f2f2f2;
+      border: 1px solid #bbb !important;
+    }
+
+    body,
+    form select,
+    input[type=text],
+    #Tekstgebied,
+    input[type=tel] {
+      font-size: 12px;
+    }
+
+    .horizontalForm input,
+    .horizontalForm iframe,
+    .horizontalForm select {
+      width: 100%;
+      line-height: 35px;
+      height: 35px;
+    }
+
+    .horizontalForm textarea {
+      width: 100%;
+    }
+
+    .horizontalForm label,
+    .horizontalForm legend,
+    .horizontalForm fieldset fieldset legend {
+      width: 100%;
+    }
+
+    fieldset.horizontal {
+      padding-top: 20px !important;
+      padding-left: 0px !important;
+    }
+
+    fieldset.horizontal label {
+      width: 100% !important;
+    }
+
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      padding: 1px;
+      margin-bottom: 20px;
+    }
+
+    .horizontalForm input[type=range] {
+      margin-bottom: 0px;
+    }
+
+    .horizontalForm input {
+      margin-bottom: 20px;
+    }
+    button {
+      margin:0px !important;
+      background-color: #0275FF !important;
+      border-color: #0275FF !important;
+      vertical-align: middle !important;
+    }
+    .horizontalForm button svg {
+        width: 45px;
+        height: 45px;
+        padding: 15px;
     }
   </style>
 </head>
 
-<body class="bg-light">
+<body>
 
   <div class="container my-5">
     <form action="bedanktB.html" method="post" name="fs3_responder" class="horizontalForm">
       <h3>Aanmelding Buurtfeest</h3>
-      <img src="buurtfeest.jpg" alt="Buurtfeest" class="img-fluid mb-4">
+      <img src="buurtfeest.jpg" alt="Buurtfeest" class="img-fluid">
       <a name="ancResp"></a>
-      <fieldset><label for="Tekst">Tekst</label>
+      <fieldset>
+        <label for="Tekst">Wat is je naam?</label>
         <input type="text" name="Tekst" value="" size="40" maxlength="80" id="Tekst" placeholder="">
-        <label for="Email">E-mail</label>
-        <input name="Email" value="" size="40" maxlength="80" id="Email" placeholder="" type="email">
-        <label for="Telefoonnummer">Telefoonnummer</label>
-        <input type="tel" name="Telefoonnummer" value="" size="40" maxlength="80" id="Telefoonnummer" placeholder="">
-        <label for="Paswoord">Paswoord</label>
-        <input type="password" name="Paswoord" value="" size="40" maxlength="80" id="Paswoord" placeholder="">
-        <label for="Tekstgebied">Tekstgebied</label>
-        <textarea name="Tekstgebied" rows="5" cols="40" id="Tekstgebied" placeholder=""></textarea>
-        <label for="Nummer">Nummer (getal)</label>
-        <input type="number" name="Nummer" value="" size="10" maxlength="20" id="Nummer" placeholder="">
-        <fieldset class="vertical" style="min-height: 64px;">
-          <legend for="radio_vert">
-            Radioknop (radiobutton)
 
+        <label for="Dropdownselectielijstenkel">
+          In welke leeftijdscategorie val je?
+        </label>
+        <select name="Dropdownselectielijstenkel" id="Dropdownselectielijstenkel">
+          <option value="Kies een optie" id="Dropdownselectielijstenkel_1">Kies een optie</option>
+          <option value="Onder de 18" id="Dropdownselectielijstenkel_2">Onder de 18</option>
+          <option value="18–30 jaar" id="Dropdownselectielijstenkel_3">18–30 jaar</option>
+          <option value="31–50 jaar" id="Dropdownselectielijstenkel_4">31–50 jaar</option>
+          <option value="51–70 jaar" id="Dropdownselectielijstenkel_3">51–70 jaar</option>
+          <option value="71 jaar of ouder" id="Dropdownselectielijstenkel_4">71 jaar of ouder</option>
+        </select>
 
-          </legend>
-          <label for="Radioknop_ver_1">
-            <input type="radio" name="Radioknop" value="Optie 1" id="Radioknop_ver_1"> Optie 1
-          </label>
-          <br><label for="Radioknop_ver_2">
-            <input type="radio" name="Radioknop" value="Optie 2" id="Radioknop_ver_2"> Optie 2
-          </label>
-          <br><label for="Radioknop_ver_3">
-            <input type="radio" name="Radioknop" value="Optie 3" id="Radioknop_ver_3"> Optie 3
-          </label>
-          <br> <label for="Radioknop" generated="true" class="error"></label>
-        </fieldset>
-        <fieldset class="vertical" style="min-height: 37px;">
+        <fieldset class="horizontal" style="min-height: 37px;">
           <legend>
-            Checkbox
-
-
+            Waar zou je graag aan mee willen doen op het feest?
           </legend>
-
-          <label for="Checkbox_ver_1">
+          <label for="Checkbox_hor_1">
             <input type="checkbox" name="Checkbox" value="Optie 1" id="Checkbox_ver_1">
-            Optie 1
+            Muziekoptreden
           </label>
           <br>
           <label for="Checkbox_ver_2">
             <input type="checkbox" name="Checkbox" value="Optie 2" id="Checkbox_ver_2">
-            Optie 2
+            Kinderactiviteiten
           </label>
           <br>
           <label for="Checkbox_ver_3">
             <input type="checkbox" name="Checkbox" value="Optie 3" id="Checkbox_ver_3">
-            Optie 3
+            Eten en drinken
+          </label>
+          <br>
+          <label for="Checkbox_ver_4">
+            <input type="checkbox" name="Checkbox" value="Optie 3" id="Checkbox_ver_4">
+            Creatieve workshops
+          </label>
+          <br>
+          <label for="Checkbox_ver_5">
+            <input type="checkbox" name="Checkbox" value="Optie 3" id="Checkbox_ver_5">
+            Spelletjes of sport
+          </label>
+          <br>
+          <label for="Checkbox_ver_6">
+            <input type="checkbox" name="Checkbox" value="Optie 3" id="Checkbox_ver_6">
+            Vrijmarkt
           </label>
           <br>
           <label for="Checkbox" generated="true" class="error"></label>
         </fieldset>
-        <div class="dateField">
-          <label for="datepicker9">
-            Datum picker
 
+        <fieldset class="horizontal" style="min-height: 64px;">
+          <legend for="radio_vert">
+            Wil je meehelpen met de organisatie?
+          </legend>
+          <label for="Radioknop_ver_1">
+            <input type="radio" name="Radioknop" value="Optie 1" id="Radioknop_ver_1"> Ja, ik help graag mee!
           </label>
-
-          <input type="text" name="Datumpicker" value="" size="" id="datepicker9" for="datepicker9" placeholder=""
-            class="hasDatepicker"><img class="ui-datepicker-trigger"
-            src="/site/CD60FA5882771B55C12579BF003B6F4A/$File/datepicker.png" alt="..." title="...">
-
-        </div>
-        <label for="Dropdownselectielijstenkel">
-          Dropdown selectielijst (enkel)
-
-        </label>
-        <select name="Dropdownselectielijstenkel" id="Dropdownselectielijstenkel">
-          <option value="-" id="Dropdownselectielijstenkel_1">-</option>
-          <option value="Keuze 1" id="Dropdownselectielijstenkel_2">Keuze 1</option>
-          <option value="Keuze 2" id="Dropdownselectielijstenkel_3">Keuze 2</option>
-          <option value="Keuze 3" id="Dropdownselectielijstenkel_4">Keuze 3</option>
-        </select>
-
-        <label for="Dropdownselectielijstmulti">
-          Dropdown selectielijst (multi)
-
-        </label>
-        <select multiple="" name="Dropdownselectielijstmulti" id="Dropdownselectielijstmulti">
-          <option value="-" id="Dropdownselectielijstmulti_1">-</option>
-          <option value="Keuze 1" id="Dropdownselectielijstmulti_2">Keuze 1</option>
-          <option value="Keuze 2" id="Dropdownselectielijstmulti_3">Keuze 2</option>
-          <option value="Keuze 3" id="Dropdownselectielijstmulti_4">Keuze 3</option>
-        </select>
-
-        <div class="uploadField">
-          <label for="Upload">
-            Upload
-
+          <br><label for="Radioknop_ver_2">
+            <input type="radio" name="Radioknop" value="Optie 2" id="Radioknop_ver_2"> Nee, ik geniet liever gewoon van
+            het feest
           </label>
-          <input name="Upload" type="hidden" value="">
-          <iframe src="//www.rkruizinga.nl/che1-robbin/fs3_site.nsf/htmlUpload?openform&amp;attrequired=" width="40"
-            height="5" frameborder="0" scrolling="NO" allowtransparency="" name="attFrame" id="attFrame"></iframe>
-          <input name="attUNID" type="text" class="catcher">
+          <br> <label for="Radioknop" generated="true" class="error"></label>
+        </fieldset>
+
+
+        <label for="Rangebalk">Hoeveel dagen per week ben je gemiddeld beschikbaar voor voorbereidingen?</label>
+        <input type="range" min="0" max="3" step="1" name="Rangebalk" value="" size="" id="Rangebalk" placeholder="">
+        <div class="range-labels">
+          <span>&lt;1 dag</span>
+          <span>3 dagen</span>
         </div>
-        <label for="Rangebalk">Range balk</label>
-        <input type="range" min="0" max="+5" step="1" name="Rangebalk" value="" size="" id="Rangebalk" placeholder="">
-        <label for="Colorpicker">Color picker</label>
-        <input type="color" name="Colorpicker" value="" size="" id="Colorpicker" placeholder="">
-        <label for="URL">URL</label>
-        <input type="url" name="URL" value="" size="40" maxlength="80" id="URL" placeholder="">
-        <p>RTF tekst</p>
-        <div class="clear"></div>
-        <input name="checker" value="" class="catcher" size="4">
+
+        <label for="Tekstgebied">Heb je zelf nog een leuk idee of iets dat je wilt delen?</label>
+        <textarea name="Tekstgebied" rows="5" cols="40" id="Tekstgebied" placeholder=""></textarea>
+
+        <label for="Telefoonnummer">Op welk telefoonnummer kunnen we je bereiken?</label>
+        <input type="tel" name="Telefoonnummer" value="" size="40" maxlength="80" id="Telefoonnummer" placeholder="">
+
+
         <button type="button" id="verzenden" name="verzenden" class="" value="Verzenden"
           onclick="if(validateResponseForm(this)){if(typeof switchLoadLayerTop == 'function'){switchLoadLayerTop('show')}; buildMruploader(document.forms['fs3_responder'], '1', window.frames['attFrame'], ''); ; if(typeof hideLoadlayeratfail == 'function'){hideLoadlayeratfail(document.fs3_responder)}}">Verzenden<svg>
-            <use href="/site/CD60FA5882771B55C12579BF003B6F4A/$File/entypo.svg#entypo-chevron-thin-right"></use>
+            <use href="chevron-right.svg"></use>
           </svg></button>
       </fieldset>
-      <input name="inbox" type="hidden" value="none">
-      <input name="subject" type="hidden" value="">
-      <input name="formid" type="hidden" value="02632A377D9E47EEC1258C5800393774">
-      <input name="redirect" type="hidden"
-        value="/site/E6D193DC7B8912FDC1258C580039DB72?opendocument_and_fs3Form=posted#ancResp">
-      <input name="extrasendto" type="hidden" value="E6D193DC7B8912FDC1258C580039DB72">
-      <input name="mrid" type="hidden" value="">
 
     </form>
   </div>
